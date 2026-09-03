@@ -6,21 +6,6 @@ Terraform repository for the foundational AWS networking layer of a production-g
 
 This repo is scoped strictly to **networking infrastructure**. It does not create EKS clusters, databases, Helm releases, or application resources — those are handled in separate repos that consume this repo's outputs. Following a module-based Terraform architecture: a reusable module (`modules/vpc`) and environment-specific root modules (`env/prod`, `env/dev`) that call it with real values.
 
-## Repo structure
-chat-aws-foundation/
-├── modules/
-│ └── vpc/
-│ ├── variable.tf
-│ ├── main.tf
-│ └── output.tf
-└── env/
-├── prod/
-│ ├── variable.tf
-│ ├── main.tf
-│ ├── output.tf
-│ └── backend.tf
-
-
 ## What this repo creates
 
 ### Networking core
